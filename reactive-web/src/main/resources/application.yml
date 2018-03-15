@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+#      host: 47.104.30.24
+      host: 182.92.197.56

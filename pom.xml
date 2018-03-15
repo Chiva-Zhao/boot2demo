@@ -6,7 +6,7 @@
     <groupId>com.zzh</groupId>
     <artifactId>boot2demo</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>boot2demo</name>
     <description>Demo project for Spring Boot</description>
@@ -28,7 +28,7 @@
     </properties>
 
     <build>
-        <finalName>bootdemo</finalName>
+        <finalName>reactive-web</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
