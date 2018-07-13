@@ -1,6 +1,7 @@
 package com.zzh.rest.netty;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -14,8 +15,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         String rst = new String(data, "UTF-8");
         System.out.println("接收到服务器的数据：" + rst);
 
-        ctx.writeAndFlush("服务器端的反馈信息")
+        ctx.writeAndFlush(Unpooled.copiedBuffer("服务器端的反馈信息".getBytes()))
                 .addListener(ChannelFutureListener.CLOSE);
+
     }
 
     @Override
